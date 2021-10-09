@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<style>
+body{
+  background-color: #a0eecc;
+ margin: 0; padding: 0; }
+h1 {margin: 20px;
+  color: blue;
+  text-align: center;
+}
+h2 { margin: 20px;
+  color:  brown;
+  font-family: verdana;
+  font-size: 30px;
+}
+
+p { margin: 20px;
+  font-family: verdana;
+  font-size: 20px;
+}
+img {
+  margin: 30px;
+
+}
+</style>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+  <ul id="navigation">
+		<li id="navlogo"><a id="logo" href="index.html">TraverseCal</a></li>
+		<li class="nav"><a class="navitem" href= "about.html">關於我們</a></li>
+		<li class="nav"><a class="navitem" href="website.html">好站連結</a></li>
+		<li class="nav"><a class="navitem navhover"  style="color:#efd510;">測量小知識</a>
+			<ul class="hovershow">
+			<li>
+				<a style="text-decoration: none;color: white;" href="instr_cal.html">導線計算知識</a>
+			</li>
+			<li>
+				<a style="text-decoration: none;color: white;" href="instr_survey.html">導線測量知識</a>
+			</li>
+		</ul>
+		</li>
+		<li class="nav"><a class="navitem navhover">導線計算</a>
+			<ul class="hovershow">
+			<li>
+				<a style="text-decoration: none;color: white;" href="index_test.html">閉合導線計算</a>
+			</li>
+			<li>
+				<a style="text-decoration: none;color: white;" href="index_open.html">附合導線計算</a>
+			</li>
+		</ul>
+
+</li>
+
+
+
+</ul>
+<h1>導線測量步驟和觀念</h1>
+<h2>1.選點</h2>
+<p>應注意以下幾點：(1)相鄰測站可通視、可量距；(2)測點穩固，且擺設儀器後，展望良好；(3)測站方便可及，可有效控制測區；(4)邊長大致相等。</p>
+<h2>2.用RTK-GPS測得坐標</h2>
+<p>點選妥後，標記編號於實地，並利用RTK-GPS測得其XYZ坐標(採TM2坐標系統)，此即控制測量；並繪略圖於記錄紙。給點號時，應逆時編號，如左下圖之閉合導線；圖中，為控制點，為待測之導線點；控制點亦可併入閉合導線內，如右下圖示</p>
+<img src="picture.png" alt="Girl in a jacket" width="500" height="300">
+<img src="picture1.png" alt="Girl in a jacket" width="500" height="300">
+<h2>3.測角</h2>
+<p>正鏡與倒鏡各測一次，稱一測回；應順時測水平內角二測回，並取其平均值。如右上圖，若測站為8B，先後視點8A，再前視點8C，8C方向讀數減去8A方向讀數，即得水平角ABC。若測站為控制點，為求算測站與下一測點的方位角，應加測連接角，如左上圖中之PAE；在點8A擺設儀器後，可採方向觀測法，正鏡、倒鏡各測P、8E、8B、P一次，相鄰方向相減，並取正倒鏡平均值，即可求得PAE與EAB。
+</p>
+<h2>4.檢測稜鏡常數</h2>
+<p> 利用全測站儀器量距，應於室內先檢測稜鏡常數K；如下圖，於平坦地上，設定同一線上之A、B、C三點，AB與BC不必等長。首先測AB長，次測AC長，再測BC長，注意儀器與稜鏡應精確定心定平。因可假設：(AB+K)+(BC+K)=AC+K，故可根據AB、AC、BC之觀測值，求得：K = AC-(AB+BC)。
+亦可採用簡便方式，如下圖，首先利用鋼捲尺精密量測AC長，再利用全測站儀器與稜鏡測得AC'長；假設AC較接近真值，則AC'+K=AC，或K=AC-AC'。
+若K<=3 mm，通常可視之為儀器常數或比例差，或儀器與稜鏡之定心誤差，可忽略不計；否則即輸入至全測站儀器，每次且借用同一組合之儀器與稜鏡。
+</p>
+<img src="picture2.png" alt="Girl in a jacket" width="500" height="300">
+<h2>5.量距</h2>
+<p>應觀測任兩相鄰點間之平距(在全測站儀器之LCD面板上，通常顯示為HD)，往測、返測至少各測一回；如前頁圖在點8B擺站時，應測8B->8A之平距(返測)與8B->8C之平距(往測)；在點8C擺站時，應測8C->8B之平距(返測)與8C->8D之平距(往測)。對閉合導線而言，測回至起點時，每段邊長至少已測兩次，各自取平均值，可檢視其精密度。
+</p>
+
+<h2>6.導線誤差計算</h2>
+<p>所有內角和應等於(n-2)*180，式中，n為邊的個數，計算角度閉合差如下式：fA=內角和-(n-2)*180，角度閉合差應小於K*(n)**1/2；K暫訂為30"，譬如觀測一個四邊形，fA應小於60"，否則應重測。若導線某一邊長之兩端均為控制點，仍應測距，此為檢核測距儀是否有系統誤差，或檢核控制點是否已有變動；若檢測結果與利用二控制點反算之邊長的差異在容許範圍內 (暫訂為 1/10,000)，則視控制點沒有變動，而後仍根據控制點原有的坐標資料，來計算導線點之坐標。若檢測結果之差異超過容許範圍，則應再謹慎測距一次。
+</p>
+
+
+
+
+</body>
+</html>

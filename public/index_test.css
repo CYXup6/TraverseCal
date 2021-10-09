@@ -1,0 +1,213 @@
+body{
+  margin: 0;
+  background-color:#abedd8;
+}
+#navigation {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 3px;
+  background-color: #333;
+  width: 100%;
+}
+#navlogo{
+  float: left;
+}
+
+
+.nav{
+  float: right;
+  padding-top: 25px;
+}
+.navitem {
+
+  color: white;
+
+  padding: 20px 20px;
+
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+
+}
+.navitem:hover {
+  color: #efd510;
+  border-bottom: 3px solid  #efd510;
+}
+
+#logo{
+  color: #118df0;
+  font-size: 70px;
+  padding: 5px;
+  font-style: italic;
+  text-shadow: 3px 2px #a5def1;
+  text-decoration: none;
+  border-radius: 5px;
+}
+footer{
+  height: 50px;
+  background-color: #393e46;
+}
+.copyright{
+  margin-top: 16px;
+  color: white;
+  float: right;
+  padding-right: 15px;
+}
+.school{
+  text-decoration:none;
+  margin-top: 16px;
+  padding-left: 15px;
+  color: white;
+  float: left;
+}
+.location{
+  height: 30px;
+  width: 50px;
+  padding-top: 10px;
+  float:left;
+}
+.main{
+  height:520px;
+  width: 100%;
+
+}
+.left{
+  float: left;
+  height:475px;
+  width: 38%;
+  overflow-y: auto;
+  margin-left: 3%;
+  background-color: #46cdcf;
+  border-radius: 35px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+}
+.right{
+  float: right;
+  height:475px;
+  width: 52%;
+  overflow-y: auto;
+  margin-right: 3%;
+  background-color: #46cdcf;
+  border-radius: 35px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+}
+input.userinput{
+  background-color: #b0f4e6;
+  border-radius: 10px;
+  border-color: #a0eecc;
+}
+.hovershow{
+  display: none;
+  background-color: #333;
+  list-style: none;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  padding: 0;
+  margin:0;
+}
+.navhover:hover{
+  border: none;
+}
+.navhover:hover + .hovershow{
+  display: block;
+}
+.hovershow:hover{
+  display: block;
+}
+.submit{
+  font-size: 25px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #ee4540;
+  border-radius: 5px;
+  border-color: #ee4540;
+  color: white;
+  display: inline;
+  margin-left: 40%;
+}
+.submit:hover{
+  background-color: #e41749;
+}
+.referbutton{
+  margin-left: 7%;
+}
+.description1{
+  float: left;
+  height: 225px;
+  width: 420px;
+}
+.adjustpara1{
+  font-size: 13px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #9764c7;
+  border-radius: 5px;
+  border-color: #9764c7;
+  color: white;
+  width: 40%;
+  display: block;
+}
+.adjustpara2{
+  font-size: 15px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #f85f73;
+  border-radius: 5px;
+  border-color: #f85f73;
+  color: white;
+
+  letter-spacing: 2px;
+  display: inline;
+}
+.adjustpara3{
+  font-size: 15px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #f85f73;
+  border-radius: 5px;
+  border-color: #f85f73;
+  color: white;
+  letter-spacing: 2px;
+  margin-left: 2%;
+  display: inline;
+}
+.adjustpara4{
+  font-size: 20px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #00bbf0;
+  border-radius: 5px;
+  border-color: #00bbf0;
+  color: white;
+
+  letter-spacing: 10px;
+  display: inline;
+}
+.adjustpara5{
+  font-size: 20px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #00bbf0;
+  border-radius: 5px;
+  border-color: #00bbf0;
+  color: white;
+  margin-left: 2%;
+  letter-spacing: 10px;
+  display: inline;
+}
+.adjustpara6{
+  font-size: 20px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #ffc93c;
+  border-radius: 5px;
+  border-color: #ffc93c;
+  color: white;
+
+  letter-spacing: 40px;
+  display: inline;
+}
+.adjustpara7{
+  font-size: 20px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #ffc93c;
+  border-radius: 5px;
+  border-color: #ffc93c;
+  color: white;
+  margin-left: 2%;
+  letter-spacing: 40px;
+  display: inline;
+}

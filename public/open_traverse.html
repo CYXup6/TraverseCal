@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TraverseCal</title>
+		<script type="text/javascript" src="open_traverse.js"></script>
+		<link rel="stylesheet" type="text/css" href="result.css">
+	</head>
+	<body>
+		<ul id="navigation">
+      <li id="navlogo"><a id="logo" href="index.html">TraverseCal</a></li>
+      <li class="nav"><a class="navitem" href="about.html">關於我們</a></li>
+      <li class="nav"><a class="navitem" href="website.html">好站連結</a></li>
+			<li class="nav"><a class="navitem navhover">測量小知識</a>
+				<ul class="hovershow">
+				<li>
+					<a style="text-decoration: none;color: white;" href="instr_cal.html">導線計算知識</a>
+				</li>
+				<li>
+					<a style="text-decoration: none;color: white;" href="instr_survey.html">導線測量知識</a>
+				</li>
+			</ul>
+			</li>
+      <li class="nav"><a class="navitem navhover" style="color: #efd510;">導線計算</a>
+
+								<ul class="hovershow">
+									<li>
+										<a style="text-decoration: none;color: white;" href="index_test.html">閉合導線計算</a>
+									</li>
+									<li>
+										<a style="text-decoration: none;color: white;" href="index_open.html">附合導線計算</a>
+									</li>
+								</ul>
+
+						</li>
+
+
+
+    </ul>
+		<P style="font-size: 35px; font-weight: 900; text-align: center;">附合導線計算結果</p>
+		<div id='tablediv' style="width: 95%;margin:auto;border-radius: 10px;border: 3px solid #e3fdfd;background-color: #e3fdfd;">
+    <table id='resulttable' style="margin: auto;">
+  <tr>
+    <th>點號</th>
+    <th>觀測角</th>
+    <th>改正數</th>
+    <th>改正角</th>
+    <th>方位角</th>
+    <th>距離</th>
+    <th>橫距</th>
+    <th>縱距</th>
+    <th>改正橫距</th>
+    <th>改正縱距</th>
+    <th>座標值(x,y)</th>
+  </tr>
+    <script type="text/javascript">
+      gennum();
+    </script>
+
+</table>
+<p id='precise'></p>
+<p id='dprecise'></p>
+<P id='rank'></p>
+</div >
+<div id='btndiv' style="width: 95%;margin:auto;margin-top: 10px;border-radius: 10px;border: 3px solid #e3fdfd;background-color: #e3fdfd;">
+<button onclick="angle_error()" id='maerror'>角度偵錯</button>
+<span id="ae"></span>
+<div></div>
+<button onclick="distance_error()" id='mderror'>距離偵錯</button>
+<span id='de'></span>
+<button onclick="toprint()" id='toprint'>列印計算結果</button>
+</div>
+<center>
+
+<p id='demo' style="font-size:20px;letter-spacing: 5px;font-weight:bold;text-decoration: underline;">導線示意圖</p>
+<canvas id="canvas" width="1000" height="1000" style="background-color:#ffffd2;border:3px solid #ffffd2;border-radius:15px;"></canvas>
+
+</center>
+
+  <script>
+		diffcal();
+		draw();
+	</script>
+
+	</body>
+	<footer id='foot'>
+    <img class="location" src="location.svg">
+    <a href="https://landeconomics.nccu.edu.tw/" class="school">國立政治大學地政學系　NCCU L.E.</a>
+    <p class="copyright">© 2019 TraverseCal.</p>
+  </footer>
+</html>

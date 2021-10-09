@@ -1,0 +1,116 @@
+body{
+  background-color:#a0eecc;
+  margin: 0;
+}
+#navigation {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 3px;
+  background-color: #333;
+  width: 100%;
+}
+#navlogo{
+  float: left;
+}
+.nav{
+  float: right;
+  padding-top: 25px;
+}
+.navitem {
+
+  color: white;
+
+  padding: 20px 20px;
+
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+
+}
+.navitem:hover {
+  color: #efd510;
+  border-bottom: 3px solid  #efd510;
+}
+
+#logo{
+  color: #118df0;
+  font-size: 70px;
+  padding: 5px;
+  font-style: italic;
+  text-shadow: 3px 2px #a5def1;
+  text-decoration: none;
+  border-radius: 5px;
+}
+footer{
+  height: 50px;
+  background-color: #393e46;
+}
+.copyright{
+  margin-top: 16px;
+  color: white;
+  float: right;
+  padding-right: 15px;
+}
+.school{
+  text-decoration:none;
+  margin-top: 16px;
+  padding-left: 15px;
+  color: white;
+  float: left;
+}
+.location{
+  height: 30px;
+  width: 50px;
+  padding-top: 10px;
+  float:left;
+}
+.hovershow{
+  display: none;
+  background-color: #333;
+  list-style: none;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  padding: 0;
+  margin:0;
+}
+.navhover:hover{
+  border: none;
+}
+.navhover:hover + .hovershow{
+  display: block;
+}
+.hovershow:hover{
+  display: block;
+}
+table,th,td{
+
+  border:1px solid black;
+  border-collapse:collapse;
+}
+tr:hover{
+  background-color: #50c9ba;
+}
+table{
+  width:98%
+}
+#maerror,#mderror{
+  font-size: 25px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #3490de;
+  border-radius: 5px;
+  border-color: #3490de;
+  color: white;
+  display: inline;
+  margin: 3px;
+}
+#toprint{
+  font-size: 25px;
+  font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;
+  background-color: #3490de;
+  border-radius: 5px;
+  border-color: #3490de;
+  color: white;
+  display: block;
+  margin: 3px;
+  margin-top: 20px;
+}

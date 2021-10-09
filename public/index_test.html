@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>TraverseCal</title>
+		<script type="text/javascript" src="index_test.js"></script>
+		<link rel="stylesheet" type="text/css" href="index_test.css">
+	</head>
+	<body>
+
+		<ul id="navigation">
+      <li id="navlogo"><a id="logo" href="index.html">TraverseCal</a></li>
+      <li class="nav"><a class="navitem" href="about.html">關於我們</a></li>
+      <li class="nav"><a class="navitem" href="website.html">好站連結</a></li>
+			<li class="nav"><a class="navitem navhover">測量小知識</a>
+				<ul class="hovershow">
+				<li>
+					<a style="text-decoration: none;color: white;" href="instr_cal.html">導線計算知識</a>
+				</li>
+				<li>
+					<a style="text-decoration: none;color: white;" href="instr_survey.html">導線測量知識</a>
+				</li>
+			</ul>
+			</li>
+      <li class="nav"><a class="navitem navhover" style="color: #efd510;">導線計算</a>
+
+								<ul class="hovershow">
+									<li>
+										<a style="text-decoration: none;color: white;" href="index_test.html">閉合導線計算</a>
+									</li>
+									<li>
+										<a style="text-decoration: none;color: white;" href="index_open.html">附合導線計算</a>
+									</li>
+								</ul>
+
+						</li>
+
+
+
+    </ul>
+		<h2 style="text-align: center;font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;">
+		<span style="font-size: 35px; font-weight: 900;"><span style="font-size: 40px; text-shadow: 1px 1px white,2px 2px white;">閉合</span>導線計算
+		</span>
+		 >>>
+		<span style="text-decoration: underline;">Step 1 輸入資料
+		</span>
+		 	>>>
+		 <span style="text-decoration: underline;">Step 2 進階選項設定(Optional)
+		 </span>
+		 	>>>
+			<span style="text-decoration: underline;">Step 3 開始計算
+			</span>
+		</h2>
+
+
+		<div class="main">
+			<div class="left">
+			<button style="font-family: 'Arial','Microsoft YaHei','黑體','宋體',sans-serif; background-color:#9764c7;margin-left: 40%;margin-top:5px;border-color:#9764c7;color:white;" onclick="changenum();">更改導線點個數</button>
+			<p style="margin:0;color:#ff0b55;">[二度分帶坐標系統]</p>
+			<label>內部控制點座標值 X:</label>
+			<input class="userinput data" type="text" name="" value=""><br>
+			<label>內部控制點座標值 Y:</label>
+			<input class="userinput data" type="text" name="" value=""><br>
+			<label>外部控制點座標值 X:</label>
+			<input class="userinput data" type="text" name="" value=""><br>
+			<label>外部控制點座標值 Y:</label>
+			<input class="userinput data" type="text" name="" value=""><br>
+			<p style="margin:0;color:#ff0b55;">[觀測角: 以  度-分-秒  格式輸入]</p>
+			<script>var num = popup()</script>
+
+			<label>(外部控制點-內部控制點-<span style="border-bottom: 2px solid #ff0b55;">最後觀測點</span>)的夾角:</label>
+			<input class="userinput data" type="text" name="" value=""><br><br>
+			</div>
+
+			<div class="right">
+			<p style="text-align: left;"><span style="font-size:25px; border-top: 3px solid #eaf5ff;border-left: 3px solid #eaf5ff;margin-left:10px;font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;">使</span>用範例數據:</p>
+			<input type="image" src="database.png" onclick="usedata1();" class="referbutton">14點</input>
+			<input type="image" src="database.png" onclick="usedata2();" class="referbutton">4點</input>
+			<input type="image" src="database.png" onclick="usedata3();" class="referbutton">4點</input>
+			<input type="image" src="database.png" onclick="usedata4();" class="referbutton">9點</input>
+			<p style="text-align: left;margin-bottom:0px;"><span style="font-size:25px; border-top: 3px solid #eaf5ff;border-left: 3px solid #eaf5ff;margin-left:10px;font-family: "Arial","Microsoft YaHei","黑體","宋體",sans-serif;">調</span>整觀測角測量方式:(預設:逆時編號順時測角)</p>
+			<img class="description1" src="description1.png">
+
+			<button class="adjustpara1" onclick="ap1();">恢復預設值</button>
+			<div style="height: 20px;"></div>
+			<button class="adjustpara2" onclick="ap2();">順時初始觀測角</button>
+			<button class="adjustpara3" onclick="ap3();">逆時初始觀測角</button>
+			<div style="height: 20px;"></div>
+			<button class="adjustpara4" onclick="ap4();">順時測角</button>
+			<button class="adjustpara5" onclick="ap5();">逆時測角</button>
+			<div style="height: 20px;"></div>
+			<button class="adjustpara6" onclick="ap6();">內角</button>
+			<button class="adjustpara7" onclick="ap7();">外角</button>
+			<button class="submit" onclick="trans();">開始計算</button>
+
+			</div>
+
+
+
+	</div>
+	<script>
+	document.getElementsByClassName('adjustpara2')[0].style.borderStyle = "inset";
+	document.getElementsByClassName('adjustpara4')[0].style.borderStyle = "inset";
+	document.getElementsByClassName('adjustpara6')[0].style.borderStyle = "inset";
+	document.getElementsByClassName('adjustpara3')[0].style.borderStyle = "outset";
+	document.getElementsByClassName('adjustpara5')[0].style.borderStyle = "outset";
+	document.getElementsByClassName('adjustpara7')[0].style.borderStyle = "outset";
+	</script>
+	</body>
+	<footer>
+    <img class="location" src="location.svg">
+    <a href="https://landeconomics.nccu.edu.tw/" class="school">國立政治大學地政學系　NCCU L.E.</a>
+    <p class="copyright">© 2019 TraverseCal.</p>
+  </footer>
+</html>

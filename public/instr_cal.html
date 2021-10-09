@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<style>
+body{
+  background-color: #a0eecc;
+ margin: 0; padding: 0; }
+h1 {
+  margin: 20px;
+  color: blue;
+  text-align: center;
+}
+h2 {
+  margin: 20px;
+  color: brown;
+  font-family: verdana;
+  font-size: 30px;
+}
+
+
+p {
+  margin: 20px;
+  font-family: verdana;
+  font-size: 20px;
+}
+pre{
+  margin: =0px;
+  font-family: verdana;
+  font-size: 20px;
+}
+img {
+  margin: 30px;
+
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+  <ul id="navigation">
+		<li id="navlogo"><a id="logo" href="index.html">TraverseCal</a></li>
+		<li class="nav"><a class="navitem" href= "about.html">關於我們</a></li>
+		<li class="nav"><a class="navitem" href="website.html">好站連結</a></li>
+		<li class="nav"><a class="navitem navhover" style="color:#efd510;">測量小知識</a>
+			<ul class="hovershow">
+			<li>
+				<a style="text-decoration: none;color: white;" href="instr_cal.html">導線計算知識</a>
+			</li>
+			<li>
+				<a style="text-decoration: none;color: white;" href="instr_survey.html">導線測量知識</a>
+			</li>
+		</ul>
+		</li>
+		<li class="nav"><a class="navitem navhover">導線計算</a>
+			<ul class="hovershow">
+			<li>
+				<a style="text-decoration: none;color: white;" href="index_test.html">閉合導線計算</a>
+			</li>
+			<li>
+				<a style="text-decoration: none;color: white;" href="index_open.html">附合導線計算</a>
+			</li>
+		</ul>
+
+</li>
+
+
+
+</ul>
+<h1>導線計算方法</h1>
+<h2>1.改正角度</h2>
+<p>數學上應假設封閉型導線為完全閉合，而利用其角度和，可計算出角度閉合差。下列兩種改正方式中，第1種較常用:<br>
+1.假設每個角度之觀測條件相等，平均配賦閉合差，以計算改正量<br>
+2.對觀測條件較差，譬如短邊相鄰的角度，配賦較多改正量。<br>
+須注意:<br>
+改正量與角度之大小無關;<br>
+改正是為了幾何上之閉合條件，改正後角度值不見得 比改正前的更接近真值。<br>
+下圖為計算說明</p>
+<img src="picture3.png" alt="Girl in a jacket" width="500" height="300"><img src="picture4.png" alt="Girl in a jacket" width="500" height="300" style="display: block;">
+
+<h2>2.計算各邊方位角</h2>
+<p>應已知或假設至少一個導線邊的方位。一般計算，可假設其中一邊為北方，或測得一邊之磁方位，據此計算其他邊之方位。界址測量應求得真方向，通常可利用下列三種方式:<br>
+1.經由測量，求得導線其中一邊之真方向;<br>
+2.將已知邊之端點設為導線點，並量測已知邊至導線邊夾角;<br>
+3.經由天文觀測或GPS決定導線一邊之真方向。<br>
+下圖為計算說明</p>
+<img src="picture5.png" alt="Girl in a jacket" width="800" height="300" style="display: block;">
+<h2>3.計算各點縱橫距</h2>
+<p> 導線邊在X軸與Y軸方向之分量稱為橫距與縱距，又稱為經距與緯距，為免正負號取用與象限判斷之困擾，應 使用 方位角而非方向角。計算橫距與縱距即正算問題。<br>
+  公式為:橫距=∆XAB=XB – XA =SAB sinφAB<br>
+<pre>
+           縱距=∆YAB=YB – YA =SAB cosφAB
+</pre>
+
+<h2>4.計算縱橫距閉合差並平差</h2>
+<p>如果所有角度與距離的量測完整無誤，理想閉合導線之橫距和與縱距和均應等於零，附合導線之橫距和與縱距和則應各等於兩端點之橫距與縱距;
+若不符合上述條件，不符值分別稱之為橫距閉合差和縱距閉合差對封閉型導線而言，若閉合差小於可容忍範圍，應配賦改正線性閉合差。嚴謹之改正為利用最小自乘平差法;<br>
+橫距改正數AB = − (橫距閉合差/Σ S)×邊長AB <br>
+縱距改正數AB = − (縱距閉合差/Σ S)×邊長AB<br>
+下圖為計算說明
+</p>
+<img src="picture6.png" alt="Girl in a jacket" width="700" height="300" style="display: block;">
+<h2>5.計算導線(平面)閉合差及精度</h2>
+<p>對閉合導線而言，自起點開始，持續計算並累加各邊之橫距與縱距，最後理應回至起點，但量測 導線的邊與角難免誤差，無法閉合至起點的誤差 即導線之位置閉合差，或稱之線性閉合差。
+線性閉合差，可分為橫距閉合差與縱距閉合差兩方向分量，如下式所示。導線之相對精度則如下式所示，通常相對精度以分子為1之分數表 示，分母並捨位成與分子具同樣之有效位數。<br>
+下圖為計算公式
+</p>
+<img src="picture7.png" alt="Girl in a jacket" width="500" height="100" style="display: block;">
+<h2>6.計算各點坐標</h2>
+<p>設定起點坐標後，下一點之XY坐標即將起點之XY坐標分別 加上兩點間之橫距與縱距，以此類推，次一點之XY坐標即將前一點之XY坐標分別加上兩點間之橫距與縱距，持續計 算至最後一點。<br>
+若為閉合導線，應計算回起點，若為附合導線，應計算至 末端控制點，並檢核計算是否有誤。<br>
+下圖為計算說明
+</p>
+
+<img src="picture8.png" alt="Girl in a jacket" width="600" height="300" style="display: block;">
+
+
+</body>
+</html>
